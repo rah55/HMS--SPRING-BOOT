@@ -43,7 +43,7 @@ public class roomController {
 		return new ResponseEntity<>(service.updateRoom( r1),HttpStatus.ACCEPTED);
 	}
 	
-	@DeleteMapping("/delete")		// API FOR DELETING THE ROOM
+	@DeleteMapping("/delete/{roomid}")		// API FOR DELETING THE ROOM
 	public ResponseEntity<String> deleteRoom(@PathVariable int roomid)throws globalException{
 		
 		String st = service.deleteRoom(roomid);

@@ -9,10 +9,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@Entity        // THIS ANNOTATION IS USED FOR CREATING A TABLE FOR USER
+@Data			//THIS IS USED FOR LOMBOK
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity        // THIS ANNOTATION IS USED FOR CREATING A TABLE FOR USER
 public class room {
 
 	@Id //THIS ANNOTATION IS USED FOR CREATING A TABLE

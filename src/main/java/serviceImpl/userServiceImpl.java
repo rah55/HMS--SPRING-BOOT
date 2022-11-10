@@ -48,4 +48,26 @@ public class userServiceImpl implements userService {
 			 }
 		 
 	}
+	
+	@Override
+	public String updatePhone(int userid,String phone)throws globalException{  //HERE UPDATEPHONE METHOD IS IMPLEMENTED
+		int st = userrepo.updatePhone(userid,phone);
+		if(st==1) {    // IF USERID IS FOUND THEN IT WILL UPDATE THE NUMBER
+			return "updated...";
+		}
+		else {    	// IF USERID NOT FOUND 
+			throw new globalException("something went wrong ");
+		}
+	}
+	
+	@Override
+	public String allotRoom(int userid,int roomid) throws globalException {   // HERE WE ALLOT THE ROOM THE GIVEN USER
+		int st=userrepo.allotRoom(userid,roomid);
+		if(st==1) {									// IF USER ID IS FOUND THEN ROOM WILL ALLOT 
+			return "Room alloted to " +userid;
+		}
+		else {										// IF USER ID IS NOT FOUND
+			throw new globalException("something went wrong");
+			}
+	}
 }

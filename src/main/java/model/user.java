@@ -12,10 +12,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-@Data
-@Entity        // THIS ANNOTATION IS USED FOR CREATING A TABLE FOR USER
+@Data	//THIS IS USED FOR LOMBOK
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity        // THIS ANNOTATION IS USED FOR CREATING A TABLE FOR USER
 public class user {
 
 	@Id // this annotation is used to treat user id as primary key
